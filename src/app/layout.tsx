@@ -1,8 +1,7 @@
-import Cards from '@/components/cards/cards'
-import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Headers from '@/components/header/header'
+import Cards from '@/components/cards/cards'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,11 +16,51 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" dir="rtl">
+      <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png"></link>
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png"></link>
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png"></link>
+        <link rel="manifest" href="assets/images/icons/site.webmanifest"></link>
+        <link rel="mask-icon" href="assets/images/icons/safari-pinned-tab.svg" color="#666666"></link>
+        <link rel="shortcut icon" href="assets/images/icons/favicon.ico"></link>
+        <meta name="apple-mobile-web-app-title" content="Molla"></meta>
+        <meta name="application-name" content="Molla"></meta>
+        <meta name="msapplication-TileColor" content="#cc9966"></meta>
+        <meta name="msapplication-config" content="assets/images/icons/browserconfig.xml"></meta>
+        <meta name="theme-color" content="#ffffff"></meta>
+        <link rel="stylesheet" href="assets/vendor/line-awesome/line-awesome/line-awesome/css/line-awesome.min.css"></link>
+        {/* <!-- Plugins CSS File --> */}
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" href="assets/css/bootstrap-rtl.min.css"></link>
+        <link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css"></link>
+        <link rel="stylesheet" href="assets/css/plugins/magnific-popup/magnific-popup.css"></link>
+        <link rel="stylesheet" href="assets/css/plugins/jquery.countdown.css"></link>
+        {/* <!-- Main CSS File --> */}
+        <link rel="stylesheet" href="assets/css/style.css"></link>
+        <link rel="stylesheet" href="assets/css/skins/skin-demo-4.css"></link>
+        <link rel="stylesheet" href="assets/css/demos/demo-4.css"></link>
+      </head>
+      <body>
         <Headers />
         <Cards />
         {children}
+
+        {/* <!-- Plugins JS File --> */}
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery.hoverIntent.min.js"></script>
+        <script src="assets/js/jquery.waypoints.min.js"></script>
+        <script src="assets/js/superfish.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/bootstrap-input-spinner.js"></script>
+        <script src="assets/js/jquery.plugin.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/jquery.countdown.min.js"></script>
+        {/* <!-- Main JS File --> */}
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/demos/demo-4.js"></script>
+        <script src='test.js' />
       </body>
     </html>
   )
