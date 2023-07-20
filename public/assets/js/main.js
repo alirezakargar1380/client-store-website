@@ -315,7 +315,6 @@ $(document).ready(function () {
 
             // Init all carousel
             $wrap.find('[data-toggle="owl"]').each(function () {
-                console.log(this)
                 var $this = $(this),
                     newOwlSettings = $.extend({}, owlSettings, $this.data('owl-options'));
 
@@ -328,6 +327,7 @@ $(document).ready(function () {
 
     // Product Image Zoom plugin - product pages
     if ($.fn.elevateZoom) {
+        console.log('im here asd')
         $('#product-zoom').elevateZoom({
             gallery: 'product-zoom-gallery',
             galleryActiveClass: 'active',
