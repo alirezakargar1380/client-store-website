@@ -8,10 +8,11 @@ import Users from './users'
 // import styles from './page.module.css'
 
 export default async function Page() {
-  const req = await fetch("https://randomuser.me/api/?gender=female&results=10");
-  const data = await req.json();
 
-  return <Users initialUsers={data.results} />;
+  const products = await (await fetch("http://localhost:3002/api/products?data_per_page=10&page=1&sort=1")).json()
+  const categories = await (await fetch("http://localhost:3002/api/landing-section-name")).json()
+
+  return <Users products={products.data} category={categories} />;
 }
 
 // async function Page(dd: any) {

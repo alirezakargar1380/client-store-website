@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 // import Cards from '@/components/cards/cards'
 import Image from 'next/image'
 import NextHead from 'next/head'
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App !',
@@ -43,7 +43,6 @@ export default function RootLayout({
         <link rel="stylesheet" href="/assets/css/demos/demo-4.css"></link>
         {/* <!-- Plugins JS File --> */}
         <Script src="/assets/js/jquery.min.js"></Script>
-        <Script src="/assets/js/bootstrap.bundle.min.js"></Script>
         <Script src="/assets/js/jquery.hoverIntent.min.js"></Script>
         <Script src="/assets/js/jquery.waypoints.min.js"></Script>
         <Script src="/assets/js/superfish.min.js"></Script>
@@ -53,8 +52,9 @@ export default function RootLayout({
         <Script src="/assets/js/jquery.plugin.min.js"></Script>
         <Script src="/assets/js/jquery.magnific-popup.min.js"></Script>
         <Script src="/assets/js/jquery.countdown.min.js"></Script>
+        <Script src="/assets/js/bootstrap.bundle.min.js"></Script>
         {/* <!-- Main JS File --> */}
-        <Script src="/assets/js/main.js" strategy="afterInteractive"></Script>
+        <Script src="/assets/js/main.js"></Script>
         <Script src="/assets/js/demos/demo-4.js"></Script>
         <Script src='/test.js' />
       </head>

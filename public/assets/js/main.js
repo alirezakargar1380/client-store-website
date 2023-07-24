@@ -59,7 +59,7 @@ $(document).ready(function () {
         $('.lookbook-dot').addClass('istatic');
     });
 
-    $('.close-lookbook').on('click', function() {
+    $('.close-lookbook').on('click', function () {
         $('.dot-showbox').removeClass('active');
         $('.lookbook-dot').removeClass('show-menu');
         return false;
@@ -327,7 +327,6 @@ $(document).ready(function () {
 
     // Product Image Zoom plugin - product pages
     if ($.fn.elevateZoom) {
-        console.log('im here asd')
         $('#product-zoom').elevateZoom({
             gallery: 'product-zoom-gallery',
             galleryActiveClass: 'active',
@@ -382,7 +381,7 @@ $(document).ready(function () {
         });
 
         owlProductGallery.owlCarousel({
-            rtl:true,
+            rtl: true,
             loop: false,
             margin: 0,
             responsiveClass: true,
